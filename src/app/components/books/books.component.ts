@@ -24,7 +24,6 @@ export class BooksComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
   }
 
   onSubmit(){
@@ -34,7 +33,12 @@ export class BooksComponent implements OnInit {
   private getBooks(author: string) {
     this.bookService.getBooks(author).then((books)=>{
       this.Books  = books;
+      console.log(books)
     })
   }
+
+
+
+
 
 }

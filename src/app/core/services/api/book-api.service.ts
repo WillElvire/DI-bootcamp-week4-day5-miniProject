@@ -15,7 +15,7 @@ export class BookApiService {
   }
 
   request(parameter: string) {
-    let apiURL = `${this.urlString}?q=inauthor:"${parameter}"&langRestrict=en`;
+    let apiURL = `${this.urlString}?q=inauthor:"${parameter}"&langRestrict=en&key=${this.apiKey}`;
     return this.http.get(apiURL,{headers : this.getHeader()});
   }
 
